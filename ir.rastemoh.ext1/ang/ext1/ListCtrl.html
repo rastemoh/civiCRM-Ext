@@ -1,0 +1,34 @@
+<div class="crm-container">
+  <div crm-ui-debug="memberships"></div>
+
+  <form name="myForm" crm-ui-id-scope>
+
+	<div crm-ui-accordion="{title: ts('Memberships')}">
+		<div class="crm-block">
+			<p>
+				Filter memberships based on start date: 
+				<br>
+				Beginning:<input type="date" name="range_start" ng-model="dates.rangeStart">
+				End: <input type="date" name="range_end" ng-model="dates.rangeEnd">
+			</p>
+		</div>
+		<div class="crm-block">
+			<table>
+				<thead>
+					<th>Name</th>
+					<th>Start Date</th>
+					<th>Expire Date</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="membership in memberships|filter:dateFilter">
+						<td ng-bind="membership['contact_id.display_name']"></td>
+						<td ng-bind="membership.start_date"></td>
+						<td ng-bind="membership.end_date"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+  </form>
+
+</div>
