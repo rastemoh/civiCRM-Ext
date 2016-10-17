@@ -1,4 +1,4 @@
-# civiCRM-Ext
+# civiCRM Extension
 An Extenstion written for civiCRM on Drupal which lists memberships and allows to filter them. 
 The extension is written with AngularJS.
 Most files are generated automatically with the civix command in the environment.
